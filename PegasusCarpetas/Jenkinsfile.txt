@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'maven:3.6.1' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Checkout-git') {
             steps {
-                sh 'mvn --version'
+                git poll: true, url: 'https://github.com/duranrojasm/Argos.git'
             }
         }
     }
