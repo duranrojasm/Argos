@@ -11,12 +11,13 @@ pipeline {
                 bat 'echo "Hola Mundo"'
             }
         }
-	Stage('Check'){
-	    steps {
+		stage('Check'){
+	    	steps {
                 script{
-   		     parentBranches = '$(git branch)'
-		}
+   		    		parentBranches = '$(git branch)'
+   		    		bat 'echo ${parentBranches}'
+				}
             }
-	}
+		}
     }
 }
