@@ -15,7 +15,7 @@ pipeline {
 	    	steps {
                 script{
    		    		parentBranches = '$(git branch)'
-   		    		bat 'echo "Lista de branch ${parentBranches}"'
+   		    		bat "echo 'Lista de branch ${parentBranches}'"
 				}
             }
 		}
