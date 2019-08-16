@@ -8,8 +8,15 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'echo "Hello World"'
+                bat 'echo "Hola Mundo"'
             }
         }
+	Stage('Check'){
+	    steps {
+                script{
+   		     parentBranches = '$(git branch)'
+		}
+            }
+	}
     }
 }
